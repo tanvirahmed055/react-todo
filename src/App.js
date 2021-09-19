@@ -23,11 +23,11 @@ function LoadTodo() {
   return (
     <div>
       <h1>Number of ToDo: {todos.length}</h1>
-      <div>
-        {
-          todos.map(todo => <ToDo title={todo.title} userid={todo.userId} id={todo.id} completed={todo.completed} ></ToDo>)
-        }
-      </div>
+
+      {
+        todos.map(todo => <ToDo title={todo.title} userid={todo.userId} id={todo.id} completed={todo.completed} ></ToDo>)
+      }
+
     </div>
   )
 }
@@ -36,11 +36,11 @@ function LoadTodo() {
 function ToDo(props) {
   //console.log(props);
   return (
-    <div>
+    <div className="todo">
       <h2>Todo Title: {props.title}</h2>
       <p>User Id: {props.userid}</p>
       <p>Id: {props.id}</p>
-      <p>Status: {props.completed}</p>
+      <p>Completed: {props.completed.toString()}</p>
 
     </div>
   )
